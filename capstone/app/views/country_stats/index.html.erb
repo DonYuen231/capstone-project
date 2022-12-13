@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Country Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mobilephones</th>
+      <th>Mortalityunder5</th>
+      <th>Healthexpenditurepercapita</th>
+      <th>Healthexpenditureppercentgdp</th>
+      <th>Population</th>
+      <th>Populationurban</th>
+      <th>Birthrate</th>
+      <th>Lifeexpectancy</th>
+      <th>Gdp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @country_stats.each do |country_stat| %>
+      <tr>
+        <td><%= country_stat.name %></td>
+        <td><%= country_stat.mobilephones %></td>
+        <td><%= country_stat.mortalityunder5 %></td>
+        <td><%= country_stat.healthexpenditurepercapita %></td>
+        <td><%= country_stat.healthexpenditureppercentGDP %></td>
+        <td><%= country_stat.population %></td>
+        <td><%= country_stat.populationurban %></td>
+        <td><%= country_stat.birthrate %></td>
+        <td><%= country_stat.lifeexpectancy %></td>
+        <td><%= country_stat.GDP %></td>
+        <td><%= link_to 'Show', country_stat %></td>
+        <td><%= link_to 'Edit', edit_country_stat_path(country_stat) %></td>
+        <td><%= link_to 'Destroy', country_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Country Stat', new_country_stat_path %>

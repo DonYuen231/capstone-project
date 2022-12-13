@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mobilephones: 1
+  mortalityunder5: 1
+  healthexpenditurepercapita: 1
+  healthexpenditureppercentGDP: 1
+  population: 1
+  populationurban: 1
+  birthrate: 1
+  lifeexpectancy: 1
+  GDP: 1
+
+two:
+  name: MyString
+  mobilephones: 1
+  mortalityunder5: 1
+  healthexpenditurepercapita: 1
+  healthexpenditureppercentGDP: 1
+  population: 1
+  populationurban: 1
+  birthrate: 1
+  lifeexpectancy: 1
+  GDP: 1

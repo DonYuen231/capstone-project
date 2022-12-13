@@ -1,0 +1,67 @@
+<%= form_for(country_stat) do |f| %>
+  <% if country_stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(country_stat.errors.count, "error") %> prohibited this country_stat from being saved:</h2>
+
+      <ul>
+      <% country_stat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mobilephones %>
+    <%= f.number_field :mobilephones %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mortalityunder5 %>
+    <%= f.number_field :mortalityunder5 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :healthexpenditurepercapita %>
+    <%= f.number_field :healthexpenditurepercapita %>
+  </div>
+
+  <div class="field">
+    <%= f.label :healthexpenditureppercentGDP %>
+    <%= f.number_field :healthexpenditureppercentGDP %>
+  </div>
+
+  <div class="field">
+    <%= f.label :population %>
+    <%= f.number_field :population %>
+  </div>
+
+  <div class="field">
+    <%= f.label :populationurban %>
+    <%= f.number_field :populationurban %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthrate %>
+    <%= f.number_field :birthrate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lifeexpectancy %>
+    <%= f.number_field :lifeexpectancy %>
+  </div>
+
+  <div class="field">
+    <%= f.label :GDP %>
+    <%= f.number_field :GDP %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

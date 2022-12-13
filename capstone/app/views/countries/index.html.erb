@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Countries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stat</th>
+      <th>Rails</th>
+      <th>G</th>
+      <th>Scaffold</th>
+      <th>Country stat</th>
+      <th>Name</th>
+      <th>Mobilephones</th>
+      <th>Mortalityunder5</th>
+      <th>Healthexpenditurepercapita</th>
+      <th>Healthexpenditureppercentgdp</th>
+      <th>Population</th>
+      <th>Populationurban</th>
+      <th>Birthrate</th>
+      <th>Lifeexpectancy</th>
+      <th>Gdp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @countries.each do |country| %>
+      <tr>
+        <td><%= country.stat %></td>
+        <td><%= country.rails %></td>
+        <td><%= country.g %></td>
+        <td><%= country.scaffold %></td>
+        <td><%= country.country_stat %></td>
+        <td><%= country.name %></td>
+        <td><%= country.mobilephones %></td>
+        <td><%= country.mortalityunder5 %></td>
+        <td><%= country.healthexpenditurepercapita %></td>
+        <td><%= country.healthexpenditureppercentGDP %></td>
+        <td><%= country.population %></td>
+        <td><%= country.populationurban %></td>
+        <td><%= country.birthrate %></td>
+        <td><%= country.lifeexpectancy %></td>
+        <td><%= country.GDP %></td>
+        <td><%= link_to 'Show', country %></td>
+        <td><%= link_to 'Edit', edit_country_path(country) %></td>
+        <td><%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Country', new_country_path %>
